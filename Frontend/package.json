@@ -3,12 +3,12 @@
   "name": "frontend",
   "version": "1.0.0",
   "private": true,
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "node": "^24.6.0",
     "react": "^18.3.1",
