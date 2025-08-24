@@ -5,18 +5,15 @@ export default function FieldEditor({ field, onChange, onRemove }) {
         <strong>{field.label || 'Untitled'} <span style={{ color: '#9ca3af' }}>({field.type})</span></strong>
         <button className="btn ghost" onClick={onRemove}>Remove</button>
       </div>
-
       <div className="grid" style={{ marginTop: 10 }}>
         <div className="col-half">
           <label>Label</label>
           <input className="input" value={field.label} onChange={(e) => onChange({ ...field, label: e.target.value })} />
         </div>
-
         <div className="col-half">
           <label>Placeholder</label>
           <input className="input" value={field.placeholder} onChange={(e) => onChange({ ...field, placeholder: e.target.value })} />
         </div>
-
         <div className="col-half">
           <label>Width</label>
           <select className="input" value={field.width} onChange={(e) => onChange({ ...field, width: e.target.value })}>
@@ -25,7 +22,6 @@ export default function FieldEditor({ field, onChange, onRemove }) {
             <option value="third">Third</option>
           </select>
         </div>
-
         <div className="col-half">
           <label>Required</label>
           <select className="input" value={field.required ? 'yes' : 'no'} onChange={(e) => onChange({ ...field, required: e.target.value === 'yes' })}>
@@ -33,12 +29,10 @@ export default function FieldEditor({ field, onChange, onRemove }) {
             <option value="yes">Yes</option>
           </select>
         </div>
-
         <div className="col-full">
           <label>Helper Text</label>
           <input className="input" value={field.helperText} onChange={(e) => onChange({ ...field, helperText: e.target.value })} />
         </div>
-
         {(field.type === 'select' || field.type === 'radio' || field.type === 'checkbox-group') && (
           <div className="col-full">
             <label>Options</label>
