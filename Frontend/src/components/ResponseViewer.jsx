@@ -29,9 +29,7 @@ export default function ResponseViewer() {
       return row;
     });
   }, [form, responses]);
-
   if (!form) return <div>Loading...</div>;
-
   return (
     <div className="card">
       <div className="row" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
